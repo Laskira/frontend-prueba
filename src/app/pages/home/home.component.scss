@@ -1,0 +1,50 @@
+.container {
+  margin-left: 2em;
+  padding: 2em;
+
+  .buscar-button {
+    margin-bottom: 1em;
+  }
+}
+
+.tableContainer {
+  text-align: left;
+  border-collapse: collapse;
+  background-color: #f3f3f3;
+  padding: 2em;
+  width: 500px;
+}
+
+.inputContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffff;
+  padding: 10px 15px;
+  border-radius: 8px;
+}
+
+.buttonOption {
+  width: 70px !important;
+  padding: 6px 0 !important;
+}
+
+th,
+td {
+  border: solid 1px #000000;
+  padding: 12px;
+}
+
+thead {
+  background-color: #e34444;
+  border-bottom: solid 5px #fd8793;
+  color: #ffffff;
+}
+
+tr:nth-child(even) {
+  background-color: #ddd;
+}
+
+.buttonsContainer {
+  display: flex;
+}

@@ -1,1 +1,35 @@
-<p>home works!</p>
+<div class="container">
+  <div>
+    <button
+      type="button"
+      class="btn btn-danger buscar-button"
+      (click)="showUsers()"
+    >
+      Buscar
+    </button>
+  </div>
+
+  <table class="tableContainer">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+      </tr>
+    </thead>
+
+    <tbody *ngIf="mostrarUsuarios; else sinBusquedad">
+      <tr *ngFor="let usuario of UsuariosList">
+        <td>{{ usuario.usuID }}</td>
+        <td>{{ usuario.nombre }} {{ usuario.apellido }}</td>
+
+        <td colspan="2" *ngIf="UsuariosList.length <= 0;">
+          No cuentas con usuarios registrados
+        </td>
+      </tr>
+    </tbody>
+
+    <ng-template #sinBusquedad>
+      <td colspan="2">Hey, aún no has iniciado la busqueda de tus usuarios</td>
+    </ng-template>
+  </table>
+</div>
